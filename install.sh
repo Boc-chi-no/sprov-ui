@@ -136,17 +136,18 @@ install_v2ray() {
 }
 
 close_firewall() {
-    if [[ x"${release}" == x"centos" ]]; then
-        systemctl stop firewalld
-        systemctl disable firewalld
-    elif [[ x"${release}" == x"ubuntu" ]]; then
-        ufw disable
-    elif [[ x"${release}" == x"debian" ]]; then
-        iptables -P INPUT ACCEPT
-        iptables -P OUTPUT ACCEPT
-        iptables -P FORWARD ACCEPT
-        iptables -F
-    fi
+     echo  -e "关闭用户防火墙 ,亏源作者想得出来"
+#     if [[ x"${release}" == x"centos" ]]; then
+#         systemctl stop firewalld
+#         systemctl disable firewalld
+#     elif [[ x"${release}" == x"ubuntu" ]]; then
+#         ufw disable
+#     elif [[ x"${release}" == x"debian" ]]; then
+#         iptables -P INPUT ACCEPT
+#         iptables -P OUTPUT ACCEPT
+#         iptables -P FORWARD ACCEPT
+#         iptables -F
+#     fi
 }
 
 port=80
