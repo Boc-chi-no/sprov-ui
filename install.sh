@@ -127,6 +127,9 @@ install_java() {
 install_v2ray() {
     echo -e "${green}开始安装or升级v2ray${plain}"
     bash <(curl -L https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh) -f
+    mkdir /etc/v2ray
+    mv /usr/local/etc/v2ray/config.json /etc/v2ray/config.json
+    ln -s /etc/v2ray/config.json /usr/local/etc/v2ray/config.json
     if [[ $? -ne 0 ]]; then
         echo -e "${red}v2ray安装或升级失败，请检查错误信息${plain}"
         exit 1
