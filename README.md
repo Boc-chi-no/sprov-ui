@@ -46,5 +46,7 @@
 wget https://raw.githubusercontent.com/LJea/sprov-ui/master/install.sh
 chmod +x install.sh
 ./install.sh
+wget -O /usr/bin/sprov-ui -N --no-check-certificate https://github.com/LJea/sprov-ui/raw/master/sprov-ui.sh && chmod +x /usr/bin/sprov-ui
 ```
+
 
